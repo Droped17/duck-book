@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import StyledPage from "./StyledPage";
 import Link from "next/link";
 import { NextPage } from "next";
+import { useEffect } from "react";
+import { pid } from "process";
 
 const inter = Inter({ subsets: ["latin"] });
 
