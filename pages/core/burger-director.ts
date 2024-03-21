@@ -4,9 +4,9 @@ import { BurgerSteps } from "./burger-config";
 class BurgerDirector {
     private builder!: IBuilder
 
-    constructor(builder: IBuilder){
-        this.setBuilder(builder);
-    }
+    // constructor(builder: IBuilder){
+    //     this.setBuilder(builder);
+    // }
 
     public setBuilder(builder: IBuilder):void {
         this.builder = builder
@@ -25,7 +25,7 @@ class BurgerDirector {
 export {BurgerDirector}
 
 
-const burgerBuilder = new BurgerBuilder();
-const burgerDirector = new BurgerDirector(burgerBuilder)
+// const burgerBuilder = new BurgerBuilder();
+// const burgerDirector = new BurgerDirector()
 
 

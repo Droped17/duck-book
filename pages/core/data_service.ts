@@ -7,6 +7,7 @@ export interface ICategory {
 
 export interface IArticle {
     id: number
+    burger :string
     title: string
     author: string
     content: string
