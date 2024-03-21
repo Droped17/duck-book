@@ -1,12 +1,20 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import StyledPage from "./StyledPage";
+import Link from "next/link";
+import { NextPage } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function MainPage() {
+const Home: NextPage = () => {
   return (
     <div>
-      duck book {process.env.SECRET}
+      <h1>Hello this is main MainPage</h1>
+      <Link href="/about">
+        <p>About</p>
+      </Link>
     </div>
   );
 }
+
+export default Home;
