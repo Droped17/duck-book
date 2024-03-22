@@ -14,7 +14,9 @@ class LoginService {
     private static instance: LoginService;
     private isLoggedIn : boolean = false;
     private token: string = '';
-    private loginState: IUser | null = null;
+    // private loginState: IUser | null = null;
+    private applicationUser : ApplicationUser = {} as ApplicationUser
+
     private constructor() {};
 
     public static getInstance(): LoginService{
