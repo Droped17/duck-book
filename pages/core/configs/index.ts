@@ -7,4 +7,8 @@ enum Labels {
     SUBMIT = "Login"
 }
 
-export {Placeholders,Labels};
+enum TestIDs {
+    ERROR = "error message"
+};
+
+export {Placeholders,Labels,TestIDs};
