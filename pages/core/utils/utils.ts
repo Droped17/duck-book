@@ -3,4 +3,8 @@ const isLetter = (str:string) => {
     return /[A-Za-z0-9]/.test(str)
 };
 
-export {isLetter};
+const generateToken = () => {
+    return Math.random().toString(36).substring(2) + Math.floor(Date.now() / 1000);
+};
+
+export {isLetter,generateToken};
