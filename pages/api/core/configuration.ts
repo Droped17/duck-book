@@ -1,4 +1,5 @@
 import { LoginWithMock } from "./login-strategy";
+import { LoginWithGQL } from "@/pages/core/login.service";
 
 enum Configuration {
     CORRECT_REQUEST = 'Success !',
@@ -6,7 +7,8 @@ enum Configuration {
 }
 
 enum LoginStrategiesName {
-    MOCK = 'mock'
+    MOCK = 'mock',
+    GQL = 'gql'
 }
 
 enum UserBuilderMethods {
@@ -16,11 +18,12 @@ enum UserBuilderMethods {
 };
 
 const LoginStrategies = {
-    [LoginStrategiesName.MOCK]: new LoginWithMock()
+    [LoginStrategiesName.MOCK]: new LoginWithMock(),
+    [LoginStrategiesName.GQL]: new LoginWithGQL()
 };
 
 const loginType = LoginStrategies[LoginStrategiesName.MOCK];
 
 // const currentLoginStrategy = LoginStrategies[LoginStrategiesName.AMPLIFY];
 
-export {Configuration,LoginStrategiesName,loginType};
+export {Configuration,LoginStrategiesName,loginType,UserBuilderMethods};
